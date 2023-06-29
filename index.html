@@ -1,41 +1,48 @@
-<html>
-<head lang="polish">
-    <meta charset="utf-18">
-    <link type="stylesheet" src="styles.css">
-    <link rel="favicon" href="favicon.ico">
-<body marginwidth="100px">
+<!DOCTYPE html> <!--dodanie DOCTYPE-->
+<html lang="pl"> <!-- zamiana head na html ,zamiana polish na pl-->
+<head> <!-- wstawienie head -->
+    <meta charset="utf-8"> <!--ytf-18 to żart prima-aprilis -->
+    <link rel="stylesheet" href="styles.css"> <!-- zamiana type na rel,zamiana src na href-->
+    <link rel="icon" href="favicon.ico"> <!-- zamiana rel="favicon" na rel="icon"-->
 <style>
     body {
-        background-color: blackish;
         color: red;
+		background-color: black; <!-- zamiana blackish na black i zaminana kolejności-->
+		margin: 100px;
     }
 </style>
+</head> <!--zamknięcie head-->
+<body> <!-- przesunięcie body i wrzucenie marginwidth do style w head-->
 <header>
-    <img src="hero.png" />
+    <img src="hero.png" alt="image hero"> <!-- nie potrzebny "/" na końcu i brak alt  -->
 
-    <h1>Gamification - Level up your Experience</h2>
+    <h1>Gamification - Level up your Experience</h1>  <!--zamknięcie h2 zamiast h1 -->
     <nav>
         <ul>
             <li><a href="#about" title="About">About</a></li>
-            <li><a href="#benefits">Benefits</a></li>
-            <li><a src="examples" title="Examples>Examples</a>
-            <li><a target="blank" hre="https://oskarwegner.pl">About us</a></li>
+            <li><a href="#benefits" title="Benefits">Benefits</a></li> <!--brak title -->
+            <li><a href="#examples" title="Examples">Examples</a> </li> <!--src zamiast href, brak "#" w href, brak zamknięcia cudzysłowu, brak domknięcia li -->
+            <li><a target="_blank" href="https://oskarwegner.pl">About us</a></li><!--brak "_" przed blank,hre zamiast href -->
         </ul>
     </nav>
-</section>
+</header> <!-- zamknięcie section zamiast header -->
 
 <section>
-    <div><section><div><p class="hidden"><a href="htts://stranger-things.com"<font face="verdana">I am hiding from you!</a></font></p></div></section></div>
+    <div>
+		<p hidden> <!-- zamiana class="hidden" na hidden -->
+			<a href="https://stranger-things.com" style="font-family:verdana;">I am hiding from you!</a> <!--było htts zamiast htps, zamiana font face na style, rozbicie kodu na kilka lini kodu dla poprawy czytelności  -->
+		</p>																						<!--usunięcie nadmiarowych div i section -->
+	</div> 
 </section>
 
-<section id="about">
-    <h1>About Gamification</h1>
-    <p style=font-face: verdana, geneva>Gamification is the application of game-design elements and game principles in non-game contexts. It involves using game mechanics, such as points, badges, and leaderboards, to engage users and motivate them to achieve specific goals. Gamification has gained popularity in various fields, including education, marketing, and employee training.
-    <p href="https://gamification.org">Gamification taps into the natural human desire for competition, achievement, and rewards. By incorporating game elements into tasks or processes, it can enhance user engagement, promote learning, and drive desired behaviors.</p>
+<section id="about">	<!--zmiana font-face na font-family, p nie posiada atrybutu href dlatego został rozbity na p i a  -->
+    <h1>About Gamification</h1> 
+    <p style="font-family: verdana, geneva">Gamification is the application of game-design elements and game principles in non-game contexts. It involves using game mechanics, such as points, badges, and leaderboards, to engage users and motivate them to achieve specific goals. Gamification has gained popularity in various fields, including education, marketing, and employee training. </p>
+    <p> <a href="https://gamification.org">Gamification taps into the natural human desire for competition, achievement, and rewards. By incorporating game elements into tasks or processes, it can enhance user engagement, promote learning, and drive desired behaviors. </a> </p>
 </section>
 
-<section id="examples" id="benefits">
-    <h2>Benefits of Gamification</h2>
+<section id="benefits"> <!--nie powinno być 2 id dla jednego obiektu id="examples" zostało usunięte -->
+    <h1>Benefits of Gamification</h1> <!-- zamiana h2 na h1 -->
     <ul>
         <li>Increased user motivation and engagement</li>
         <li>Improved learning and knowledge retention</li>
@@ -45,24 +52,24 @@
 </section>
 
 <section id="examples">
-    <h4>Examples of Gamification</h3>
-    <p>Here are some notable examples of gamification:<p>
-    <ol>
-        <li>Duolingo: A language learning platform that uses game-like features to make learning fun and addictive.</ul>
+    <h1>Examples of Gamification</h1> <!-- zamiana h4 i h3 na h1 -->
+    <p>Here are some notable examples of gamification:</p> <!-- zamknięcie p-->
+    <ul> <!-- zamiana ol na ul -->
+        <li>Duolingo: A language learning platform that uses game-like features to make learning fun and addictive.</li>  <!-- zamiana /ul na /li -->
         <li>Fitness Apps: Many fitness apps incorporate gamification to encourage users to stay active and reach their fitness goals.</li>
         <li>Starbucks Rewards: The Starbucks mobile app rewards customers with stars for purchases, unlocking special offers and free drinks.</li>
-        <li>Badgeville: A gamification platform that helps businesses drive customer and employee engagement through rewards and achievements.</p>
+        <li>Badgeville: A gamification platform that helps businesses drive customer and employee engagement through rewards and achievements.</li> <!-- zamiana /p na /li -->
     </ul>
 </section>
 
 <section>
-    <form method="post" href="javascript:void(0)"></form>
+    <form method="post" action="javascript:void(0)">
 
-    <label>E-mail</label><input type="number">
-    <label>How old are you?</label><input type="number">
-
-    <button type="button">Save</button>
+    <label for="email">E-mail </label><input type="email" id="email" required > <!--zmieniony typ number na email, dodano required aby wymusić obowiązkowe wypełnienie pola, dodano for="email" i id="email"  -->
+    <label for="age"> How old are you? </label><input type="number" id="age" required >  <!--dodano for="age", id-"age" i required-->
+    <button type="submit">Save</button> <!-- zamiana type="button" na type="submit"-->
     <button type="reset">Reset</button>
+	</form>  <!-- przeniesienie form -->
 </section>
 
 <footer>
@@ -70,7 +77,7 @@
 </footer>
 
 <noscript>
-    <script>
-        alert('I am really sorry, but your browser doesnt support javascript code!');
-    </script>
+        <p>I am really sorry, but your browser doesn't support javascript code! </p> <!-- script alert() został zamieniony na p ponieważ aby zakomunikować o braku js chcieliśmy użyć funkcji z js, poprawiono literówkę doesnt na doesn't-->
 </noscript>
+</body>
+</html> <!-- zamkniecie body i html-->
